@@ -443,8 +443,11 @@ input.au-input.au-input-xl {
 }
 
 .product-box img {
-    width: 150px;
+    height: 150px; /* Adjust based on your image ratio */
+    object-fit: cover;
+    margin-bottom: 10px;
 }
+
 
 .items select {
     width: 100px;
@@ -467,13 +470,14 @@ input.au-input.au-input-xl {
 }
 
 .product-box h1 {
+    min-height: 60px; /* Adjust this value based on your needs */
     font-size: 18px;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 5px;
-    font-weight: 600;
-    padding-top: 12px;
-    margin-bottom: 7px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; /* Prevents wrapping */
 }
+
 
 .product-box h2 {
     font-size: 15px;

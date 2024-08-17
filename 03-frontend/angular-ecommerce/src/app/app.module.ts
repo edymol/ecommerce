@@ -3,11 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProductListComponent } from './component/product-list/product-list.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
 import {ProductService} from "./services/product.service";
 import { provideHttpClient } from '@angular/common/http'
 import {NgOptimizedImage} from "@angular/common";
 import {Route, RouterModule} from "@angular/router";
+import { ProductCategoryMenuComponent } from './components/product-category-menu/product-category-menu.component';
 
 const routes: Route[] = [
     {path: 'category/:id', component: ProductListComponent},
@@ -19,7 +20,8 @@ const routes: Route[] = [
 @NgModule({
   declarations: [
     AppComponent,
-    ProductListComponent
+    ProductListComponent,
+    ProductCategoryMenuComponent
   ],
     imports: [
         RouterModule.forRoot(routes),
